@@ -28,6 +28,8 @@ export default withAuth(
     db: {
       provider: process.env.DATABASE_PROVIDER || "sqlite",
       url: process.env.DATABASE_URL || "file:./keystone.db",
+      useMigrations:
+        process.env.DATABASE_PROVIDER === "postgresql" ? true : false,
     },
     server: {
       cors: {
