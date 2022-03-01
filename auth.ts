@@ -39,7 +39,6 @@ const { withAuth } = createAuth({
     // a new user, filling in these fields.
     fields: ["name", "email", "password"],
     itemData: { isAdmin: true },
-    skipKeystoneWelcome: true,
   },
 });
 
